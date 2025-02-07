@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Equipment.css">
+    <title>Equipment Techniques</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=build_circle" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logoContent">
+                <img src="logo1.png" alt="Logo" class="logo-img">
+                <h1 class="logoname">AgriConnect</h1>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="farmer_community.html">Farmer Community</a>
+                <a href="knowledge.html">Knowlegde Hub</a>
+                <a href="marketplace.html">Market Place</a>
+                <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+                <a href="#" class="logi">Login</a>
+                <div class="account-icon">
+                    <span class="material-symbols-outlined">
+                        build_circle
+                    </span>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Equipment Techniques for Sustainable Farming</h1>
+        <button id="new-technique-btn">Add New Technique</button>
+        
+        <div class="filter-options">
+            <label for="filter">Sort by:</label>
+            <select id="filter">
+                <option value="recent">Most Recent</option>
+                <option value="popular">Most Popular</option>
+                <option value="recommended">Recommended</option>
+            </select>
+        </div>
+
+        <div class="technique-list">
+            <div class="technique-item">
+                <h3><a href="#" class="technique-title">Precision Farming Tools</a></h3>
+                <p class="technique-preview">Utilizing GPS and IoT devices for efficient farming...</p>
+                <div class="technique-info">
+                    <span class="uses">120 uses</span> |
+                    <span class="last-updated">Updated 1 day ago</span> |
+                    <span class="author">by SarahGreen</span>
+                </div>
+            </div>
+            <div class="technique-item">
+                <h3><a href="#" class="technique-title">Drip Irrigation Setup</a></h3>
+                <p class="technique-preview">Drip irrigation systems reduce water wastage significantly...</p>
+                <div class="technique-info">
+                    <span class="uses">80 uses</span> |
+                    <span class="last-updated">Updated 3 days ago</span> |
+                    <span class="author">by AgriTechPro</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>Address: 123 Equipment Lane, MechaCity</p>
+                <p>Phone: (123) 555-7890</p>
+                <p>Email: <a href="mailto:support@equipconnect.com">support@equipconnect.com</a></p>
+            </div>
+            <div class="footer-social">
+                <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href=""><i class="fa-brands fa-twitter"></i> Twitter</a>
+                <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href=""><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 EquipConnect.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="EquipmentTech.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

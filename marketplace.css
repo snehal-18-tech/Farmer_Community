@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #415b2d;
+    --secondary-color: #8fe34f;
+}
+
+* {
+    font-family: 'Times New Roman';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:#2E8B57;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: relative; /* Added for positioning */
+    height: 80px;
+}
+
+.logoContent {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    margin-left: 0px;
+    max-height: 50px; /* Adjust the size of the logo */
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.logoname {
+    font-size: 2.0rem;
+    color: #a5f866;
+    font-weight: bold;
+}
+
+
+.navbar {
+    display: flex; /* Flex display for navbar */
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.navbar a:hover {
+    color: rgb(30, 247, 88);
+    border-bottom: 2px solid rgb(30, 247, 88);
+}
+
+.cart-icon {
+    position: relative;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+
+}
+.cart-icon a{
+    text-decoration: none;
+    color: white;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+/* Filter Section */
+.filter-section {
+    padding: 2rem 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.filter-btn:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+/* Product Section */
+.product-section {
+    padding: 3rem 10%;
+    background-color: #f1f1f1;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.add-to-cart {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.add-to-cart:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide navbar by default on mobile */
+        flex-direction: column; /* Stack navbar items vertically */
+        position: absolute; /* Position it absolutely to the header */
+        background-color: rgba(65, 91, 45, 0.85); /* Match header background */
+        top: 70px; /* Position below the header */
+        left: 0;
+        right: 0;
+        padding: 1rem 5%; /* Add some padding */
+    }
+
+    .navbar a {
+        margin: 10px 0; /* Vertical spacing between links */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+    }
+}

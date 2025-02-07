@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --black: #121313;
+    --white: #2E8B57;
+   
+    --box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+* {
+    font-family: 'Times New Roman';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+    border-radius: 5rem;
+}
+
+body::before {
+    content: ""; /* Required to create the pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    bottom: 0; /* Stretch to the bottom */
+    background-image: url("farmer_comm.jpg"); /* Your background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Keep the background fixed */
+    opacity: 1; /* Set the desired opacity */
+    z-index: 0; /* Position it below other elements */
+}
+
+/* General Header Styling */
+/* General Header Styling */
+.header {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 1rem 5%;
+    z-index: 999;
+    box-shadow: var(--box-shadow);
+}
+
+/* Logo Image and Name Styling */
+.logoContent {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-height: 50px; /* Adjust the size of the logo */
+    margin-right: 10px;
+}
+
+.logoname {
+    font-size: 2.5rem;
+    color: #a5f866;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 5px;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: rgb(30, 247, 88);
+    border-bottom: 2px solid rgb(30, 247, 88);
+}
+
+/* Icons (User and Menu) */
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+#user-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+#menu-bar {
+    font-size: 24px;
+    display: none; /* Hidden initially for desktop */
+    cursor: pointer;
+}
+
+/* Responsive Navbar for Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--white);
+        padding: 1rem;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex; /* Show the navbar when active */
+    }
+
+    .navbar a {
+        padding: 1rem;
+        width: 100%;
+        text-align: left;
+        color: white;
+        background-color: var(--black);
+    }
+
+    #menu-bar {
+        display: inline; /* Display hamburger menu for mobile */
+    }
+
+    /* Adjust the logo and name size */
+    .logo-img {
+        max-height: 40px;
+    }
+
+    .logoname {
+        font-size: 2rem;
+    }
+}
+
+
+.home {
+    min-height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background: url(assets/f1.jpg) no-repeat center center; /* Set the image */
+    background-size: cover; /* Cover the entire section */
+    position: relative; /* Ensure this is relative for the pseudo-element */
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Apply a transparent overlay */
+    z-index: 1; /* Set below the content */
+}
+
+.home .homeContent {
+    width: 50%;
+    text-align: center;
+    padding: 4rem;
+    position: relative; /* Ensure this content is above the background */
+    z-index: 2; /* Set above the background */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Full height */
+}
+
+.home .homeContent h2 {
+    font-size: 5rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    line-height: 6rem;
+    color: rgb(241, 244, 237); /* Ensure the text is visible */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow for better readability */
+    font-family: sans-serif;
+}
+
+
+
+/* About Section */
+.product {
+    padding: 5rem 10%;
+}
+
+.product .heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.home-btn a button {
+    display: inline-block;
+    color: white; /* White text color */
+    background-color: #143a02; /* Slightly darker green background */
+    padding: 1.2rem 2.5rem; /* Padding for balanced size */
+    font-size: 2rem;
+    border-radius: 0.8rem;
+    border: none; /* Remove the default button border */
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(60, 62, 59, 0.25); /* Adds a subtle shadow */
+    cursor: pointer;
+    outline: none; /* Removes any focus outline */
+    font-weight: bold;
+}
+
+.home-btn a button:hover {
+    background-color: #a6f276; /* Darker green on hover */
+    color: black;
+    
+}
+
+.home-btn a {
+    text-decoration: none; /* Remove underline from the anchor */
+}
+
+
+.about-us {
+    padding: 5rem 10%;
+    background-color: #f8f9fa;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.image-container {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.description {
+    flex: 2;
+    padding-left: 2rem;
+}
+
+.description h3 {
+    font-size: 3rem;
+    color: #415b2d;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.description p {
+    font-size: 1.8rem;
+    color: #0d111e;
+    line-height: 1.8rem;
+}
+
+/* Card Overlapping and Positioning */
+#card1 {
+    z-index: 1;
+}
+
+#card2 {
+    margin-left: auto;
+    margin-top: -50px; /* Overlapping card 1 */
+    z-index: 1;
+}
+
+#card3 {
+    z-index: 1;
+}
+footer {
+    background-color:  #415b2d; /* Dark Green Background */
+    color: white; /* White text */
+    padding: 1rem 20px; /* Add padding for responsiveness */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    justify-content: space-between; /* Space between sections */
+    margin-top: 60px;
+    position: relative;
+    z-index: 2; /* Make sure it appears above background */
+}
+
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between sections */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    gap: 2rem; /* Add spacing between elements for mobile */
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text on smaller screens */
+}
+
+.footer-info p {
+    margin: 0; /* Remove margin for compactness */
+    font-size: 12px; /* Smaller font size */
+}
+
+.footer-social {
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center social links on smaller screens */
+    gap: 15px; /* Space between social links */
+}
+
+.footer-social a {
+    color: white; /* White text for links */
+    text-decoration: none; /* No underline */
+    font-size: 12px; /* Smaller font size */
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+.footer-social a:hover {
+    color: #f8f9fa; /* Lighter color on hover */
+}
+
+.footer-bottom {
+    text-align: center; /* Center the copyright text */
+    font-size: 12px; /* Consistent font size */
+    margin-top: 5px; /* Reduced margin */
+}
+
+/* Responsive design for footer */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 2rem 1rem; /* Adjust padding for mobile */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center content */
+    }
+
+    .footer-info p, .footer-social a {
+        font-size: 14px; /* Increase font size for readability */
+    }
+
+    .footer-social {
+        justify-content: center; /* Center social links */
+    }
+
+    .footer-social a {
+        font-size: 16px; /* Increase icon size on mobile */
+    }
+
+    .footer-bottom {
+        font-size: 14px; /* Slightly larger for mobile */
+    }
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .about-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .description {
+        padding-left: 0;
+    }
+}
+

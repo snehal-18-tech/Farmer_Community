@@ -1,0 +1,481 @@
+html, body {
+    height: 100%; /* Ensure the html and body cover the full height */
+}
+
+body {
+    position: relative; /* Create positioning context */
+    margin: 0; /* Remove default margin */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum height for body to fill the viewport */
+}
+
+body::before {
+    content: ""; /* Required to create the pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    bottom: 60px; /* Stretch to the bottom */
+    background-image: url("farmer_comm.jpg"); /* Your background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Keep the background fixed */
+    opacity: 0.3; /* Set the desired opacity */
+    z-index: 0; /* Position it below other elements */
+}
+
+header {
+    background-color: #3CB371;
+    height: 70px;
+    width: 100%;
+     position: relative;/* Position relative to ensure z-index works */
+    z-index: 1; /* Place header above the background */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center;            /* Vertically center all items */
+    background-color:#2E8B57; /* Medium Sea Green with opacity */
+    padding: 10px 20px;
+    height: 2rem;
+    z-index: 2;
+    height:60px;
+
+}
+
+.logoContent {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-height: 50px; /* Adjust the size of the logo */
+    margin-right: 10px;
+}
+
+.logoname {
+    font-size: 2.5rem;
+    color: #a5f866;
+    font-weight: bold;
+}
+
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 10px 20px;
+}
+
+.nav-links a:hover {
+    color: rgb(30, 247, 88);
+    border-bottom: 2px solid rgb(30, 247, 88);
+}
+
+/* Login Button (aligned to the right) */
+.login {
+    background-color: #ffffff;
+    color: #3CB371;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #3CB371;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 15px; /* Add margin to the left to space out from links */
+}
+
+.login:hover {
+    background-color: #3CB371;
+    color: #ffffff;
+}
+
+.account-icon {
+    margin-left: auto; /* Push the account icon to the right */
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.account-icon span {
+    font-size: 40px; /* Increase the font size for visibility */
+    margin-top: 0px; /* Move down slightly */
+    color: white;
+}
+
+#accountName {
+    font-size: 16px;             /* Increase the font size */
+    font-weight: bold;           /* Make the text bold */
+    color: white;              /* Medium Sea Green color */
+    font-family: 'Times New Roman'; /* Choose a clean font */
+    margin-left: 10px;           /* Add some spacing to the left of the icon */
+}
+
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 30px; /* Adjust size */
+    cursor: pointer;
+    position: absolute; /* Absolutely position it */
+    top: 10px; /* Move it down slightly from the top */
+    right: 20px; /* Move it towards the right side */
+    z-index: 2; /* Ensure it stays above other content */
+}
+
+.info {
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1.2rem;
+}
+
+h1 {
+    position: relative; /* Position relative for z-index */
+    z-index: 1; /* Ensure it is above the background */
+}
+
+.categories {
+    margin-left: 5vh;
+    position: relative; /* Relative to maintain its stacking context */
+    z-index: 1;
+    width:60%;
+}
+
+.categories h1{
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center cards */
+    margin: 20px 0; /* Add top and bottom margins */
+}
+
+.card {
+    border: 2px solid black;
+    height: 270px;
+    width: 230px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 4px 8px black;
+    background-color: rgb(83, 156, 9);
+    transition: transform 0.3s ease;
+    position: relative; /* Ensure cards are above the background */
+    z-index: 1; /* Place cards above the background */
+    
+}
+
+h3 {
+    margin-top: 0px;
+    height: 15px;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 50%;
+    border-radius: 5px 5px 0 0;
+}
+
+button {
+    display: inline-block;
+    margin-left: 2px;
+    width: 95px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: rgb(191, 253, 129);
+}
+
+.join {
+    margin-top: 3px;
+    width: 98%;
+    border-radius: 5px; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.question-section {
+    text-align: center;
+    padding: 20px; /* Padding around the section */
+    position: relative; /* Positioning context */
+    z-index: 1; /* Ensure it appears above the background */
+    width: 25%; /* Occupy the right half of the page */
+    float: right; /* Align to the right */
+    margin-left:135vh ;
+    margin-top:-260px;
+}
+
+.question-area {
+    margin-top: 10px; /* Spacing between the heading and textarea */
+}
+
+textarea {
+    width: 100%; /* Width of the textarea, taking full width of the section */
+    padding: 10px; /* Padding inside the textarea */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for readability */
+    resize: none; /* Prevent resizing */
+}
+
+.post-question {
+    margin-top: 10px; /* Spacing above the button */
+    padding: 10px 15px; /* Padding inside the button */
+    background-color: #3CB371; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.post-question:hover {
+    background-color: #2e8b57; /* Darker green on hover */
+}
+
+.questions-list{
+    background-color: rgb(198, 232, 198);
+    margin-top: 68px;
+    margin-bottom: 0px;
+}
+
+.question-header {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-arrow {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.answer-item {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.answer-item i {
+    margin-right: 8px;
+    color: #3CB371;
+}
+
+.answer-item span {
+    font-size: 14px;
+    color: #333;
+}
+
+#questions li {
+    margin-bottom: 15px;
+}
+
+#questions button {
+    background-color: #3CB371;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#questions button:hover {
+    background-color: #2e8b57;
+}
+
+#answerModal {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2E8B57; /* Dark Green Background */
+    color: white; /* White text */
+    height: 60px; /* Fixed height for footer */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space between top and bottom content */
+    padding: 0 20px; /* Horizontal padding */
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Center items vertically */
+    height: 50px; /* Full height for this section */
+}
+
+.footer-info {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+}
+
+.footer-info p {
+    margin: 0; /* Remove margin for compactness */
+    font-size: 12px; /* Smaller font size */
+}
+
+.footer-social {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center vertically */
+    gap: 15px; /* Space between social links */
+}
+
+.footer-social a {
+    color: white; /* White text for links */
+    text-decoration: none; /* No underline */
+    font-size: 12px; /* Smaller font size */
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+.footer-social a:hover {
+    color: #f8f9fa; /* Lighter color on hover */
+}
+
+.footer-bottom {
+    text-align: center; /* Center the copyright text */
+    font-size: 12px; /* Consistent font size for copyright */
+    margin-top: 5px; /* Reduced margin to move it up */
+    height: 20px; /* Height for the copyright area */
+    display: flex; /* Flexbox to center text vertically */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items on smaller screens */
+        height: auto; /* Allow auto height */
+    }
+
+    .card-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards */
+    }
+
+    .question-section {
+        width: 100%; /* Full width on small screens */
+        float: none; /* Remove float */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .info h1 {
+        font-size: 1.5rem; /* Reduce info heading size */
+    }
+
+    .info p {
+        font-size: 1rem; /* Reduce info paragraph size */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links li {
+        margin: 0 10px; /* Adjust margin for smaller screens */
+        z-index: 5;
+    }
+    .nav-links {
+        display: none; /* Hide the links initially */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(60, 179, 113, 0.9); /* Background for dropdown */
+        width: 100%;
+        padding: 20px;
+        z-index: 5;
+    }
+    
+    .nav-links a {
+        padding: 15px 20px;
+        text-align: center;
+        border-bottom: 1px solid #fff; /* Add a divider between links */
+        z-index: 5;
+    }
+
+    .hamburger {
+        display: block; /* Make hamburger visible on small screens */
+        position: absolute; /* Ensure it's positioned absolutely */
+        top: 10px;
+        right: 20px;
+        z-index: 3;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the links when hamburger is clicked */
+    }
+    .account-icon {
+        justify-content: center; /* Center the account icon in the nav */
+    }
+    .login {
+        padding: 6px 12px; /* Smaller padding for login button */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .footer-social a {
+        font-size: 10px; /* Smaller font size for footer links */
+    }
+
+    .card {
+        width: 90%; /* Full width cards on small screens */
+        height: auto; /* Auto height for cards */
+    }
+    .categories {
+        margin-top: 340px; /* Add margin to avoid overlap */
+        margin-left: 0;
+    }
+    .categories h1{
+        font-size: 30px;
+        text-align: center; /* Center the heading */
+    }
+    body::before {
+        background-size: cover; /* Ensure it still covers the entire page */
+        background-position: center; /* Keep it centered */
+    }
+}

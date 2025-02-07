@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="marketplace.css">
+    <link rel="shortcut icon" type="image" href="logo.jpg">
+    <title>Marketplace | AgriConnect</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logoContent">
+            <img src="logo1.png" alt="Logo" class="logo-img">
+            <h1 class="logoname">AgriConnect</h1>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="farmer_community.html">Farmer Community</a>
+            <a href="knowledge.html">Knowledge Hub</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="cart-icon">
+            <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <h2>Filters</h2>
+        <div class="filters">
+            <button class="filter-btn" data-filter="all">All Products</button>
+            <button class="filter-btn" data-filter="seeds">Organic Seeds</button>
+            <button class="filter-btn" data-filter="instruments">Instruments</button>
+            <button class="filter-btn" data-filter="fertilizers">Fertilizers</button>
+        </div>
+    </section>
+
+    <!-- Marketplace Products -->
+    <section class="product-section">
+        <div class="product-grid" id="product-grid">
+            <div class="product-card" data-category="seeds">
+                <img src="oseed.avif" alt="Organic Seeds">
+                <h3>Organic Seeds</h3>
+                <p>$30 / Pack</p>
+                <button class="add-to-cart" data-product-id="1" data-product-name="Organic Seeds" data-product-price="30">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="instruments">
+                <img src="tractor.jpeg" alt="Tractor Equipment">
+                <h3>Tractor Equipment</h3>
+                <p>$1500</p>
+                <button class="add-to-cart" data-product-id="2" data-product-name="Tractor Equipment" data-product-price="1500">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="fertilizers">
+                <img src="fertilizer.jpg" alt="Eco-friendly Fertilizers">
+                <h3>Eco-friendly Fertilizers</h3>
+                <p>$40 / Bag</p>
+                <button class="add-to-cart" data-product-id="3" data-product-name="Eco-friendly Fertilizers" data-product-price="40">Add to Cart</button>
+            </div>
+            <!-- Add more products here -->
+        </div>
+    </section>
+
+    <script src="marketplace.js"></script>
+</body>
+</html>
